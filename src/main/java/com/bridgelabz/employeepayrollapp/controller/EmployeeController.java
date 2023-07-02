@@ -38,9 +38,9 @@ public class EmployeeController {
         ResponseDTO responseDTO = new ResponseDTO("Created Employee Data Successfully", employeeData);
         return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
-    @PutMapping("/update")
-    public ResponseEntity<ResponseDTO> updateEmployeeData(@RequestBody EmployeeDTO employeeDTO) {
-        EmployeeData employeeData = employeeService.updateEmployeeData(employeeDTO);
+    @PutMapping("/update/{id}")
+    public ResponseEntity<ResponseDTO> updateEmployeeData(@PathVariable("id") int id, @RequestBody EmployeeDTO employeeDTO) {
+        EmployeeData employeeData = employeeService.updateEmployeeData(id, employeeDTO);
         ResponseDTO responseDTO = new ResponseDTO("Updated Employee Data Successfully", employeeData);
         return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
     }
