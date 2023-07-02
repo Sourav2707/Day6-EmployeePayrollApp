@@ -1,4 +1,4 @@
-package service;
+package com.bridgelabz.employeepayrollapp.service;
 
 import com.bridgelabz.employeepayrollapp.dto.EmployeeDTO;
 import com.bridgelabz.employeepayrollapp.model.EmployeeData;
@@ -23,6 +23,7 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public EmployeeData createEmployeeData(EmployeeDTO employeeDTO) {
         EmployeeData employeeData = new EmployeeData(employeeDataList.size()+1, employeeDTO);
+        employeeDataList.add(employeeData);
         return employeeData;
     }
 
