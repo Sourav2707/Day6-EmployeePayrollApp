@@ -47,4 +47,8 @@ public class EmployeeService implements IEmployeeService {
         EmployeeData employeeData = this.getEmplyeeDataByID(empID);
         employeeRepository.delete(employeeData);
     }
+    @Override
+    public List<EmployeeData> getEmployeeByDepartment(String department) {
+        return employeeRepository.findEmployeesByDepartment(department);
+    }
 }

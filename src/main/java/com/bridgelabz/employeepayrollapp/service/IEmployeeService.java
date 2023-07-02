@@ -11,4 +11,5 @@ public interface IEmployeeService {
     EmployeeData createEmployeeData(EmployeeDTO employeeDTO);
     EmployeeData updateEmployeeData(int id, EmployeeDTO employeeDTO);
     void deleteEmployeeData(int empID);
+    List<EmployeeData> getEmployeeByDepartment(String department);
 }
