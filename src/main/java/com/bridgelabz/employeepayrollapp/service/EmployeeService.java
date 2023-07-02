@@ -3,6 +3,8 @@ package com.bridgelabz.employeepayrollapp.service;
 import com.bridgelabz.employeepayrollapp.dto.EmployeeDTO;
 import com.bridgelabz.employeepayrollapp.exception.EmployeeException;
 import com.bridgelabz.employeepayrollapp.model.EmployeeData;
+import com.bridgelabz.employeepayrollapp.repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,6 +12,8 @@ import java.util.List;
 
 @Service
 public class EmployeeService implements IEmployeeService {
+    @Autowired
+    private EmployeeRepository employeeRepository;
     List<EmployeeData> employeeDataList = new ArrayList<>();
     @Override
     public List<EmployeeData> getEmployeeData() {
@@ -26,7 +30,7 @@ public class EmployeeService implements IEmployeeService {
     public EmployeeData createEmployeeData(EmployeeDTO employeeDTO) {
         EmployeeData employeeData = new EmployeeData(employeeDataList.size()+1, employeeDTO);
         employeeDataList.add(employeeData);
-        return employeeData;
+        return employeeRepository.save(employeeData);
     }
 
     @Override
@@ -34,11 +38,12 @@ public class EmployeeService implements IEmployeeService {
         EmployeeData employeeData = this.getEmplyeeDataByID(empID);
         employeeData.setName(employeeDTO.getName());
         employeeData.setSalary(employeeDTO.getSalary());
-        return employeeData;
+        return employeeRepository.save(employeeData);
     }
 
     @Override
     public void deleteEmployeeData(int empID) {
         employeeDataList.remove(empID-1);
+        employeeRepository.deleteById(empID);
     }
 }

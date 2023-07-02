@@ -1,12 +1,18 @@
 package com.bridgelabz.employeepayrollapp.model;
 
 import com.bridgelabz.employeepayrollapp.dto.EmployeeDTO;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@Entity
+@Table(name = "employee_payroll")
 public @Data class EmployeeData {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "empID")
     private int empID;
     private String name;
     private long salary;
