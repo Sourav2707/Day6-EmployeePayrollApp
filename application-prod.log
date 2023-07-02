@@ -136,3 +136,10 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2023-07-03 00:37:49.520 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 5.045 seconds (process running for 5.793)
 2023-07-03 00:37:49.526 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:14] Employee Payroll App Started in PROD Environment
 2023-07-03 00:37:49.528 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:15] Employee payroll Db user is payrolluser
+2023-07-03 01:03:37.112 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 26532 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-03 01:03:37.114 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-03 01:03:37.115 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-03 01:03:39.848 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-03 01:03:40.242 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 3.534 seconds (process running for 3.976)
+2023-07-03 01:03:40.246 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:14] Employee Payroll App Started in PROD Environment
+2023-07-03 01:03:40.247 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:15] Employee payroll Db user is payrolluser
