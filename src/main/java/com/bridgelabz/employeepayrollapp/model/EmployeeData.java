@@ -14,12 +14,16 @@ public @Data class EmployeeData {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "empID")
     private int empID;
+    @Column(name = "name")
     private String name;
     private long salary;
     private String gender;
     private LocalDate startDate;
     private String note;
     private String profilePic;
+    @ElementCollection
+    @CollectionTable(name = "employee-department", joinColumns = @JoinColumn(name = "id"))
+    @Column(name = "departments")
     private List<String> departments;
 
     public EmployeeData(int empID, EmployeeDTO employeeDTO) {
