@@ -4,6 +4,7 @@ import com.bridgelabz.employeepayrollapp.dto.EmployeeDTO;
 import com.bridgelabz.employeepayrollapp.exception.EmployeeException;
 import com.bridgelabz.employeepayrollapp.model.EmployeeData;
 import com.bridgelabz.employeepayrollapp.repository.EmployeeRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,39 +12,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
 public class EmployeeService implements IEmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
     List<EmployeeData> employeeDataList = new ArrayList<>();
     @Override
     public List<EmployeeData> getEmployeeData() {
-        return employeeDataList;
+        return employeeRepository.findAll();
     }
 
     @Override
     public EmployeeData getEmplyeeDataByID(int empID) {
 
-        return employeeDataList.stream().filter(employeeData -> employeeData.getEmpID() == empID).findFirst().orElseThrow(() ->new EmployeeException("Employee Not Found"));
+        return employeeRepository.findById(empID).orElseThrow(() ->new EmployeeException("Employee with ID "+empID+" does not exist"));
     }
 
     @Override
     public EmployeeData createEmployeeData(EmployeeDTO employeeDTO) {
-        EmployeeData employeeData = new EmployeeData(employeeDataList.size()+1, employeeDTO);
-        employeeDataList.add(employeeData);
+        EmployeeData employeeData = new EmployeeData(employeeDTO);
+        log.debug("Emp data :"+employeeData.toString());
         return employeeRepository.save(employeeData);
     }
 
     @Override
     public EmployeeData updateEmployeeData(int empID, EmployeeDTO employeeDTO) {
         EmployeeData employeeData = this.getEmplyeeDataByID(empID);
-        employeeData.setName(employeeDTO.getName());
-        employeeData.setSalary(employeeDTO.getSalary());
+        employeeData.updateEmployeeData(employeeDTO);
         return employeeRepository.save(employeeData);
     }
 
     @Override
     public void deleteEmployeeData(int empID) {
-        employeeDataList.remove(empID-1);
-        employeeRepository.deleteById(empID);
+        EmployeeData employeeData = this.getEmplyeeDataByID(empID);
+        employeeRepository.delete(employeeData);
     }
 }

@@ -25,8 +25,13 @@ public @Data class EmployeeData {
     @CollectionTable(name = "employee-department", joinColumns = @JoinColumn(name = "id"))
     @Column(name = "departments")
     private List<String> departments;
+    public EmployeeData() {
 
-    public EmployeeData(int empID, EmployeeDTO employeeDTO) {
+    }
+    public EmployeeData(EmployeeDTO employeeDTO) {
+        this.updateEmployeeData(employeeDTO);
+    }
+    public void updateEmployeeData(EmployeeDTO employeeDTO) {
         this.empID = empID;
         this.name = employeeDTO.getName();
         this.salary = employeeDTO.getSalary();
@@ -36,8 +41,4 @@ public @Data class EmployeeData {
         this.profilePic = employeeDTO.getProfilePic();
         this.departments = employeeDTO.getDepartments();
     }
-    public EmployeeData() {
-
-    }
-
 }
