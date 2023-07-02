@@ -17,7 +17,7 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public EmployeeData getEmplyeeDataByID(int empID) {
-        return employeeDataList.get(empID);
+        return employeeDataList.get(empID-1);
     }
 
     @Override
