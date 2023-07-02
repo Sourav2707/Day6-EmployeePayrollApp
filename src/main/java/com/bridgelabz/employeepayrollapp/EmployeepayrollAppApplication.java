@@ -12,6 +12,7 @@ public class EmployeepayrollAppApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(EmployeepayrollAppApplication.class, args);
 		log.info("Employee Payroll App Started in {} Environment", context.getEnvironment().getProperty("environment"));
+		log.info("Employee payroll Db user is {}", context.getEnvironment().getProperty("spring.datasource.username"));
 	}
 
 }
