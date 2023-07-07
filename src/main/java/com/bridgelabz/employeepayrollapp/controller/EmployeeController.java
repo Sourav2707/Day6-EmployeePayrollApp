@@ -3,9 +3,13 @@ package com.bridgelabz.employeepayrollapp.controller;
 import com.bridgelabz.employeepayrollapp.dto.EmployeeDTO;
 import com.bridgelabz.employeepayrollapp.dto.ResponseDTO;
 import com.bridgelabz.employeepayrollapp.model.EmployeeData;
+import com.bridgelabz.employeepayrollapp.model.MailData;
+import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -56,6 +60,11 @@ public class EmployeeController {
     public ResponseEntity<ResponseDTO> getEmployeeByDepartment(@PathVariable("department") String department) {
         List<EmployeeData> employeeDataList = employeeService.getEmployeeByDepartment(department);
         ResponseDTO responseDTO = new ResponseDTO("Get call for ID successfull", employeeDataList);
-        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK)
+        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+    }
+
+    @PostMapping("/sendEmail")
+    public String sendEmail(@RequestBody MailData mailData) throws MessagingException {
+        return employeeService.sendEmail(mailData);
     }
 }

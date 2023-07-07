@@ -1,213 +1,20 @@
-2023-07-03 00:36:29.290 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 4236 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
-2023-07-03 00:36:29.304 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
-2023-07-03 00:36:29.305 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
-2023-07-03 00:36:34.025 [ERROR] [restartedMain] [c.z.h.p.HikariPool:594] HikariPool-1 - Exception during pool initialization.
-java.sql.SQLSyntaxErrorException: Access denied for user 'payrolluser'@'%' to database 'payroll'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:152)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.bridgelabz.employeepayrollapp.EmployeepayrollAppApplication.main(EmployeepayrollAppApplication.java:13)
+2023-07-05 12:01:24.114 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 26196 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:01:24.129 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:01:24.131 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:01:30.715 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:01:31.963 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 8.507 seconds (process running for 9.46)
+2023-07-05 12:01:31.969 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:14] Employee Payroll App Started in PROD Environment
+2023-07-05 12:01:31.975 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:15] Employee payroll Db user is payrolluser
+2023-07-05 12:03:01.619 [ERROR] [http-nio-8080-exec-2] [o.a.c.c.C.[.[.[.[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.mail.javamail.JavaMailSender.send(org.springframework.mail.SimpleMailMessage)" because "this.mailSender" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "org.springframework.mail.javamail.JavaMailSender.send(org.springframework.mail.SimpleMailMessage)" because "this.mailSender" is null
+	at com.bridgelabz.employeepayrollapp.service.EmployeeService.sendEmail(EmployeeService.java:68)
+	at com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(EmployeeController.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-2023-07-03 00:36:34.036 [ERROR] [restartedMain] [o.s.o.j.LocalContainerEntityManagerFactoryBean:426] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
-2023-07-03 00:36:34.037 [WARN] [restartedMain] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:616] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
-2023-07-03 00:36:34.083 [ERROR] [restartedMain] [o.s.b.SpringApplication:824] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.bridgelabz.employeepayrollapp.EmployeepayrollAppApplication.main(EmployeepayrollAppApplication.java:13)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:277)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
-	... 21 common frames omitted
-Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:188)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:274)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
-	... 36 common frames omitted
-2023-07-03 00:37:06.415 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 6020 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
-2023-07-03 00:37:06.418 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
-2023-07-03 00:37:06.419 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
-2023-07-03 00:37:10.467 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-03 00:37:11.000 [WARN] [restartedMain] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:616] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2023-07-03 00:37:11.070 [ERROR] [restartedMain] [o.s.b.d.LoggingFailureAnalysisReporter:40] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2023-07-03 00:37:45.128 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 9972 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
-2023-07-03 00:37:45.131 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
-2023-07-03 00:37:45.133 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
-2023-07-03 00:37:48.941 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-03 00:37:49.520 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 5.045 seconds (process running for 5.793)
-2023-07-03 00:37:49.526 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:14] Employee Payroll App Started in PROD Environment
-2023-07-03 00:37:49.528 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:15] Employee payroll Db user is payrolluser
-2023-07-03 01:03:37.112 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 26532 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
-2023-07-03 01:03:37.114 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
-2023-07-03 01:03:37.115 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
-2023-07-03 01:03:39.848 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-03 01:03:40.242 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 3.534 seconds (process running for 3.976)
-2023-07-03 01:03:40.246 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:14] Employee Payroll App Started in PROD Environment
-2023-07-03 01:03:40.247 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:15] Employee payroll Db user is payrolluser
-2023-07-03 01:08:38.525 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 21864 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
-2023-07-03 01:08:38.529 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
-2023-07-03 01:08:38.532 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
-2023-07-03 01:08:41.467 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-03 01:08:41.853 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 3.87 seconds (process running for 4.392)
-2023-07-03 01:08:41.857 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:14] Employee Payroll App Started in PROD Environment
-2023-07-03 01:08:41.858 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:15] Employee payroll Db user is payrolluser
-2023-07-03 01:09:10.599 [WARN] [http-nio-8080-exec-2] [o.s.w.s.m.s.DefaultHandlerExceptionResolver:207] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.employeepayrollapp.dto.ResponseDTO> com.bridgelabz.employeepayrollapp.controller.EmployeeController.addEmployeeData(com.bridgelabz.employeepayrollapp.dto.EmployeeDTO): [Field error in object 'employeeDTO' on field 'name': rejected value [s]; codes [Pattern.employeeDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeeDTO.name,name]; arguments []; default message [name],[Ljakarta.validation.constraints.Pattern$Flag;@91af4ac,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee name invalid]] ]
-2023-07-03 01:09:26.212 [WARN] [http-nio-8080-exec-4] [o.s.w.s.m.s.DefaultHandlerExceptionResolver:207] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.employeepayrollapp.dto.ResponseDTO> com.bridgelabz.employeepayrollapp.controller.EmployeeController.addEmployeeData(com.bridgelabz.employeepayrollapp.dto.EmployeeDTO): [Field error in object 'employeeDTO' on field 'name': rejected value [sou]; codes [Pattern.employeeDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeeDTO.name,name]; arguments []; default message [name],[Ljakarta.validation.constraints.Pattern$Flag;@91af4ac,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee name invalid]] ]
-2023-07-03 01:16:34.601 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 26228 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
-2023-07-03 01:16:34.604 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
-2023-07-03 01:16:34.604 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
-2023-07-03 01:16:37.502 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-03 01:16:37.929 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 3.755 seconds (process running for 4.286)
-2023-07-03 01:16:37.933 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:14] Employee Payroll App Started in PROD Environment
-2023-07-03 01:16:37.934 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:15] Employee payroll Db user is payrolluser
-2023-07-03 01:16:42.843 [WARN] [http-nio-8080-exec-1] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:207] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.employeepayrollapp.dto.ResponseDTO> com.bridgelabz.employeepayrollapp.controller.EmployeeController.addEmployeeData(com.bridgelabz.employeepayrollapp.dto.EmployeeDTO): [Field error in object 'employeeDTO' on field 'name': rejected value [sou]; codes [Pattern.employeeDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeeDTO.name,name]; arguments []; default message [name],[Ljakarta.validation.constraints.Pattern$Flag;@3045eb82,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee name invalid]] ]
-2023-07-03 02:21:40.945 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 12584 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
-2023-07-03 02:21:40.947 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
-2023-07-03 02:21:40.948 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
-2023-07-03 02:21:44.751 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-03 02:21:45.104 [WARN] [restartedMain] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:616] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2023-07-03 02:21:45.157 [ERROR] [restartedMain] [o.s.b.d.LoggingFailureAnalysisReporter:40] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2023-07-03 02:22:13.549 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 13224 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
-2023-07-03 02:22:13.551 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
-2023-07-03 02:22:13.553 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
-2023-07-03 02:22:16.748 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-03 02:22:17.079 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 3.92 seconds (process running for 4.354)
-2023-07-03 02:22:17.082 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:14] Employee Payroll App Started in PROD Environment
-2023-07-03 02:22:17.083 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:15] Employee payroll Db user is payrolluser
-2023-07-03 02:22:42.549 [ERROR] [http-nio-8080-exec-2] [o.a.c.c.C.[.[.[.[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.PastOrPresent' validating type 'java.lang.String'. Check configuration for 'startDate'] with root cause
-jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.PastOrPresent' validating type 'java.lang.String'. Check configuration for 'startDate'
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116)
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162)
-	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:58)
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75)
-	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130)
-	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172)
-	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:104)
-	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66)
-	at org.springframework.validation.DataBinder.validate(DataBinder.java:932)
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.validateIfApplicable(AbstractMessageConverterMethodArgumentResolver.java:248)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:142)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
@@ -252,28 +59,202 @@ jakarta.validation.UnexpectedTypeException: HV000030: No validator could be foun
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2023-07-03 02:24:37.013 [ERROR] [http-nio-8080-exec-4] [o.a.c.c.C.[.[.[.[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.PastOrPresent' validating type 'java.lang.String'. Check configuration for 'startDate'] with root cause
-jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.PastOrPresent' validating type 'java.lang.String'. Check configuration for 'startDate'
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116)
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162)
-	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:58)
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75)
-	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130)
-	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172)
-	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:104)
-	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66)
-	at org.springframework.validation.DataBinder.validate(DataBinder.java:932)
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.validateIfApplicable(AbstractMessageConverterMethodArgumentResolver.java:248)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:142)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148)
+2023-07-05 12:14:36.919 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 26544 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:14:36.922 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:14:36.923 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:14:40.002 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 26044 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:14:40.005 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:14:40.006 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:14:43.985 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:14:44.626 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 8.149 seconds (process running for 8.724)
+2023-07-05 12:14:44.668 [ERROR] [restartedMain] [o.s.b.SpringApplication:824] Application run failed
+java.lang.IllegalStateException: argument type mismatch
+HandlerMethod details: 
+Bean [com.bridgelabz.employeepayrollapp.controller.EmployeeController]
+Method [public java.lang.String com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(com.bridgelabz.employeepayrollapp.model.MailData)]
+Resolved arguments: 
+[0] [type=org.springframework.boot.context.event.ApplicationReadyEvent] [value=org.springframework.boot.context.event.ApplicationReadyEvent[source=org.springframework.boot.SpringApplication@9a8fa24]]
+
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:347)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:228)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:437)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:331)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.bridgelabz.employeepayrollapp.EmployeepayrollAppApplication.main(EmployeepayrollAppApplication.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalArgumentException: argument type mismatch
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:343)
+	... 22 common frames omitted
+2023-07-05 12:14:46.293 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:14:46.681 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 7.322 seconds (process running for 7.979)
+2023-07-05 12:14:46.701 [ERROR] [restartedMain] [o.s.b.SpringApplication:824] Application run failed
+java.lang.IllegalStateException: argument type mismatch
+HandlerMethod details: 
+Bean [com.bridgelabz.employeepayrollapp.controller.EmployeeController]
+Method [public java.lang.String com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(com.bridgelabz.employeepayrollapp.model.MailData)]
+Resolved arguments: 
+[0] [type=org.springframework.boot.context.event.ApplicationReadyEvent] [value=org.springframework.boot.context.event.ApplicationReadyEvent[source=org.springframework.boot.SpringApplication@386fbb4e]]
+
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:347)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:228)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:437)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:331)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.bridgelabz.employeepayrollapp.EmployeepayrollAppApplication.main(EmployeepayrollAppApplication.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalArgumentException: argument type mismatch
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:343)
+	... 22 common frames omitted
+2023-07-05 12:15:05.536 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 1980 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:15:05.538 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:15:05.539 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:15:09.140 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:15:09.503 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 4.38 seconds (process running for 4.828)
+2023-07-05 12:15:09.531 [ERROR] [restartedMain] [o.s.b.SpringApplication:824] Application run failed
+java.lang.IllegalStateException: argument type mismatch
+HandlerMethod details: 
+Bean [com.bridgelabz.employeepayrollapp.controller.EmployeeController]
+Method [public java.lang.String com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(com.bridgelabz.employeepayrollapp.model.MailData)]
+Resolved arguments: 
+[0] [type=org.springframework.boot.context.event.ApplicationReadyEvent] [value=org.springframework.boot.context.event.ApplicationReadyEvent[source=org.springframework.boot.SpringApplication@2bb501ae]]
+
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:347)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:228)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:437)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:331)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.bridgelabz.employeepayrollapp.EmployeepayrollAppApplication.main(EmployeepayrollAppApplication.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalArgumentException: argument type mismatch
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:343)
+	... 22 common frames omitted
+2023-07-05 12:15:24.436 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 24000 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:15:24.438 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:15:24.439 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:15:27.736 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:15:28.078 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 4.035 seconds (process running for 4.469)
+2023-07-05 12:15:28.081 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:19] Employee Payroll App Started in PROD Environment
+2023-07-05 12:15:28.082 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:20] Employee payroll Db user is payrolluser
+2023-07-05 12:15:44.041 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 7288 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:15:44.042 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:15:44.043 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:15:47.319 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:15:47.685 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 4.026 seconds (process running for 4.463)
+2023-07-05 12:15:47.705 [ERROR] [restartedMain] [o.s.b.SpringApplication:824] Application run failed
+java.lang.IllegalStateException: argument type mismatch
+HandlerMethod details: 
+Bean [com.bridgelabz.employeepayrollapp.controller.EmployeeController]
+Method [public java.lang.String com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(com.bridgelabz.employeepayrollapp.model.MailData)]
+Resolved arguments: 
+[0] [type=org.springframework.boot.context.event.ApplicationReadyEvent] [value=org.springframework.boot.context.event.ApplicationReadyEvent[source=org.springframework.boot.SpringApplication@8c64f61]]
+
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:347)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:228)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:437)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:331)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.bridgelabz.employeepayrollapp.EmployeepayrollAppApplication.main(EmployeepayrollAppApplication.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalArgumentException: argument type mismatch
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:343)
+	... 22 common frames omitted
+2023-07-05 12:16:03.125 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 21260 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:16:03.127 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:16:03.128 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:16:06.347 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:16:06.702 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 3.945 seconds (process running for 4.366)
+2023-07-05 12:16:06.705 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:19] Employee Payroll App Started in PROD Environment
+2023-07-05 12:16:06.706 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:20] Employee payroll Db user is payrolluser
+2023-07-05 12:17:03.837 [ERROR] [http-nio-8080-exec-1] [o.a.c.c.C.[.[.[.[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.mail.javamail.JavaMailSender.send(org.springframework.mail.SimpleMailMessage)" because "this.mailSender" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "org.springframework.mail.javamail.JavaMailSender.send(org.springframework.mail.SimpleMailMessage)" because "this.mailSender" is null
+	at com.bridgelabz.employeepayrollapp.service.EmployeeService.sendEmail(EmployeeService.java:68)
+	at com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(EmployeeController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
@@ -318,28 +299,222 @@ jakarta.validation.UnexpectedTypeException: HV000030: No validator could be foun
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2023-07-03 02:25:37.022 [ERROR] [http-nio-8080-exec-6] [o.a.c.c.C.[.[.[.[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.PastOrPresent' validating type 'java.lang.String'. Check configuration for 'startDate'] with root cause
-jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.PastOrPresent' validating type 'java.lang.String'. Check configuration for 'startDate'
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116)
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162)
-	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:58)
-	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75)
-	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130)
-	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400)
-	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172)
-	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:104)
-	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66)
-	at org.springframework.validation.DataBinder.validate(DataBinder.java:932)
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.validateIfApplicable(AbstractMessageConverterMethodArgumentResolver.java:248)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:142)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148)
+2023-07-05 12:18:13.765 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 15772 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:18:13.767 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:18:13.767 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:18:17.296 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:18:17.720 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 4.322 seconds (process running for 4.77)
+2023-07-05 12:18:17.725 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:19] Employee Payroll App Started in PROD Environment
+2023-07-05 12:18:17.727 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:20] Employee payroll Db user is payrolluser
+2023-07-05 12:31:46.910 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 12588 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:31:46.911 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:31:46.912 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:31:50.367 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:31:50.735 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 4.255 seconds (process running for 4.663)
+2023-07-05 12:31:50.739 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:19] Employee Payroll App Started in PROD Environment
+2023-07-05 12:31:50.740 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:20] Employee payroll Db user is payrolluser
+2023-07-05 12:32:01.674 [ERROR] [http-nio-8080-exec-1] [o.a.c.c.C.[.[.[.[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at java.base/java.io.File.<init>(File.java:278)
+	at com.bridgelabz.employeepayrollapp.service.EmployeeService.sendEmail(EmployeeService.java:90)
+	at com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(EmployeeController.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-07-05 12:33:23.789 [ERROR] [http-nio-8080-exec-3] [o.a.c.c.C.[.[.[.[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\www.google.com\imgres?imgurl=https%3A%2F%2Fi0.wp.com%2Fwww.galvanizeaction.org%2Fwp-content%2Fuploads%2F2022%2F06%2FWow-gif.gif%3Ffit%3D450%252C250%26ssl%3D1&tbnid=cLIJzfWL2-tWHM&vet=12ahUKEwjEgImu__b_AhXblGMGHfy7DEYQMygCegUIARCbAg..i&imgrefurl=https%3A%2F%2Fwww.galvanizeaction.org%2Fthe-pyschology-of-gifs%2F&docid=p3nFXr7qU-iOJM&w=450&h=250&q=gif&ved=2ahUKEwjEgImu__b_AhXblGMGHfy7DEYQMygCegUIARCbAg] with root cause
+java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\www.google.com\imgres?imgurl=https%3A%2F%2Fi0.wp.com%2Fwww.galvanizeaction.org%2Fwp-content%2Fuploads%2F2022%2F06%2FWow-gif.gif%3Ffit%3D450%252C250%26ssl%3D1&tbnid=cLIJzfWL2-tWHM&vet=12ahUKEwjEgImu__b_AhXblGMGHfy7DEYQMygCegUIARCbAg..i&imgrefurl=https%3A%2F%2Fwww.galvanizeaction.org%2Fthe-pyschology-of-gifs%2F&docid=p3nFXr7qU-iOJM&w=450&h=250&q=gif&ved=2ahUKEwjEgImu__b_AhXblGMGHfy7DEYQMygCegUIARCbAg
+	at java.base/sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at java.base/sun.nio.fs.WindowsPath.parse(WindowsPath.java:92)
+	at java.base/sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:232)
+	at java.base/java.io.File.toPath(File.java:2387)
+	at org.springframework.core.io.FileSystemResource.<init>(FileSystemResource.java:107)
+	at com.bridgelabz.employeepayrollapp.service.EmployeeService.sendEmail(EmployeeService.java:90)
+	at com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(EmployeeController.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-07-05 12:33:39.985 [ERROR] [http-nio-8080-exec-6] [o.a.c.c.C.[.[.[.[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at java.base/java.io.File.<init>(File.java:278)
+	at com.bridgelabz.employeepayrollapp.service.EmployeeService.sendEmail(EmployeeService.java:90)
+	at com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(EmployeeController.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-07-05 12:36:30.502 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 14196 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:36:30.503 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:36:30.504 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:36:34.142 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:36:34.472 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 4.383 seconds (process running for 4.843)
+2023-07-05 12:36:34.475 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:19] Employee Payroll App Started in PROD Environment
+2023-07-05 12:36:34.477 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:20] Employee payroll Db user is payrolluser
+2023-07-05 12:40:43.046 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:51] Starting EmployeepayrollAppApplication using Java 17.0.2 with PID 19592 (C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp\target\classes started by Sourav Prasanna in C:\Users\Sourav Prasanna\IdeaProjects\EmployeepayrollApp)
+2023-07-05 12:40:43.048 [DEBUG] [restartedMain] [c.b.e.EmployeepayrollAppApplication:52] Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-05 12:40:43.049 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:640] The following 1 profile is active: "prod"
+2023-07-05 12:40:46.830 [WARN] [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:231] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-05 12:40:47.189 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:57] Started EmployeepayrollAppApplication in 4.591 seconds (process running for 5.061)
+2023-07-05 12:40:47.192 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:19] Employee Payroll App Started in PROD Environment
+2023-07-05 12:40:47.194 [INFO] [restartedMain] [c.b.e.EmployeepayrollAppApplication:20] Employee payroll Db user is payrolluser
+2023-07-05 12:41:47.803 [ERROR] [http-nio-8080-exec-1] [o.a.c.c.C.[.[.[.[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\photos.google.com\photo\AF1QipN_gXpkoDY5eSjHkmRUvlmZX3OiSCXpAkmP2vQj] with root cause
+java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\photos.google.com\photo\AF1QipN_gXpkoDY5eSjHkmRUvlmZX3OiSCXpAkmP2vQj
+	at java.base/sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:182)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:153)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at java.base/sun.nio.fs.WindowsPath.parse(WindowsPath.java:92)
+	at java.base/sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:232)
+	at java.base/java.io.File.toPath(File.java:2387)
+	at org.springframework.core.io.FileSystemResource.<init>(FileSystemResource.java:107)
+	at com.bridgelabz.employeepayrollapp.service.EmployeeService.sendEmail(EmployeeService.java:90)
+	at com.bridgelabz.employeepayrollapp.controller.EmployeeController.sendEmail(EmployeeController.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
